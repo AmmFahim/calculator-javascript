@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container   ">
+        <div class="calculator d-flex justify-content-between">
+            <form action="" name="form">
+                <div class="result-area">
+                    <input type="text" id="inputPlace" placeholder="0" name="result" class="main-bar col-md-12 fahim ">
+                </div>
+                <div class="button-area">
+                    <input type="button" value="C" name="btn" class="btn col-md-4" onclick="form.result.value = ''">
+
+                    <input type="button" value="/" name="btn" class="btn col-md-3" onclick="calculate(this.value)">
+ 
+                    <input type="button" value="*" name="btn" class="btn col-md-3" onclick="calculate(this.value)">
+ 
+                    <input type="button" value="7" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="8" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="9" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="-" name="btn" class="btn col-md-3" onclick="calculate(this.value)"> 
+ 
+                    <input type="button" value="4" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="5" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="6" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="+" name="btn" class="btn col-md-3" onclick="calculate(this.value)">
+ 
+                    <input type="button" value="1" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="2" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="3" name="btn" class="btn col-md-2" onclick="calculate(this.value)">
+                    <input type="button" value="." name="btn" class="btn col-md-3" onclick="calculate(this.value)">
+
+                    <input type="button" value="=" name="btn" class="btn col-md-6" onclick="form.result.value = eval (form.result.value) ">
+                    <input type="button" value="0" name="btn" class="btn col-md-4" onclick="calculate(this.value)">
+
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function calculate(selectedBtn){
+           const previousvalue = document.getElementById("inputPlace").value
+           const currentValue = previousvalue + selectedBtn;
+
+           document.getElementById("inputPlace").value = currentValue;
+
+
+            
+        }
+    </script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
